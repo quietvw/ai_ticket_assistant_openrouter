@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2025 Himanshu Dhiraj Mishra
+Copyright (c) 2024 Cyberin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,14 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+**Cyberin - AI Ticket Assistant for WHMCS**
+
+This software integrates with OpenAI's API services. Users are responsible for:
+- Complying with OpenAI's Terms of Service
+- Managing their own OpenAI API usage and costs
+- Ensuring proper WHMCS licensing compliance
+
+For support and documentation, visit: https://cyberin.in 
