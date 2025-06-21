@@ -1,8 +1,6 @@
-# Cyberin AI Ticket Assistant for WHMCS
+# AI Ticket Assistant for WHMCS
 
-![Cyberin AI Ticket Assistant Banner](https://media.cyberin.in/file/cyberin/images/logo_big.png)
-
-Cyberin AI Ticket Assistant is a powerful addon for WHMCS that integrates OpenAI's language models directly into your support ticket system. It empowers your staff to answer customer inquiries faster, more accurately, and with greater consistency, significantly improving productivity and customer satisfaction.
+AI Ticket Assistant is a powerful addon for WHMCS that integrates OpenAI's language models directly into your support ticket system. It empowers your staff to answer customer inquiries faster, more accurately, and with greater consistency, significantly improving productivity and customer satisfaction.
 
 [![Version](https://img.shields.io/badge/version-1.5-blue.svg)](https://cyberin.in)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
