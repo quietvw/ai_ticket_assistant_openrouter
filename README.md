@@ -22,7 +22,7 @@ AI Ticket Assistant is a powerful addon for WHMCS that integrates OpenAI's langu
 
 ## 🚀 Installation Guide
 
-Installing the Cyberin AI Ticket Assistant is simple and takes only a few minutes.
+Installing AI Ticket Assistant is simple and takes only a few minutes.
 
 ### Prerequisites
 
@@ -35,11 +35,11 @@ Installing the Cyberin AI Ticket Assistant is simple and takes only a few minute
 1.  **Download the Addon**: Download the latest version from the official GitHub repository.
 2.  **Upload to WHMCS**:
     - Unzip the downloaded file.
-    - Upload the entire `openai_ticket_assistant` folder to the `/modules/addons/` directory of your WHMCS installation. The final path should be `/modules/addons/openai_ticket_assistant/`.
+    - Upload the entire `ai_ticket_assistant` folder to the `/modules/addons/` directory of your WHMCS installation. The final path should be `/modules/addons/ai_ticket_assistant/`.
 3.  **Activate the Addon**:
     - Log in to your WHMCS Admin Area.
     - Navigate to **System Settings > Addon Modules**.
-    - Find the **Cyberin - AI Ticket Assistant** in the list and click the **Activate** button.
+    - Find the **AI Ticket Assistant** in the list and click the **Activate** button.
 4.  **Configure the Addon**:
     - Once activated, click the **Configure** button.
     - Enter your **OpenAI API Key**.
