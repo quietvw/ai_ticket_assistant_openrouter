@@ -235,7 +235,7 @@ if ($action === 'generate_response') {
 
 // Prepare OpenAI API request
 $openaiData = [
-    'model' => "agentica-org/deepcoder-14b-preview:free",
+    'model' => $model,
     'messages' => [
         [
             'role' => 'system',
