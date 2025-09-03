@@ -39,9 +39,9 @@ function openai_ticket_assistant_config() {
             'openai_model' => [
                 'FriendlyName' => 'OpenAI Model',
                 'Type' => 'dropdown',
-                'Options' => 'gpt-4o-mini, o4-mini,o3,gpt-4o',
+                'Options' => 'agentica-org/deepcoder-14b-preview:free',
                 'Description' => 'Select the OpenAI model to use for generating responses',
-                'Default' => 'gpt-4',
+                'Default' => 'agentica-org/deepcoder-14b-preview:free',
             ],
             'max_tokens' => [
                 'FriendlyName' => 'Max Tokens',
