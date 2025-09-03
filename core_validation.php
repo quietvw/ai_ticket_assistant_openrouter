@@ -10,15 +10,15 @@ if (!defined("WHMCS")) {
 }
 
 // Layer 1: Base64 encoded constants
-define('BRANDING_LAYER_1', 'Q3liZXJpbiAtIEFJIFRpY2tldCBBc3Npc3RhbnQ=');
-define('BRANDING_LAYER_2', 'aHR0cHM6Ly9jeWJlcmluLmlu');
-define('BRANDING_LAYER_3', 'aHR0cHM6Ly9tZWRpYS5jeWJlcmluLmluL2ZpbGUvY3liZXJpbi9pbWFnZXMvbG9nb19iaWcucG5n');
+//define('BRANDING_LAYER_1', 'Q3liZXJpbiAtIEFJIFRpY2tldCBBc3Npc3RhbnQ=');
+//define('BRANDING_LAYER_2', 'aHR0cHM6Ly9jeWJlcmluLmlu');
+//define('BRANDING_LAYER_3', 'aHR0cHM6Ly9tZWRpYS5jeWJlcmluLmluL2ZpbGUvY3liZXJpbi9pbWFnZXMvbG9nb19iaWcucG5n');
 
 // Layer 2: XOR encryption key
-define('XOR_KEY', 'Cyberin2024');
+//define('XOR_KEY', 'Cyberin2024');
 
 // Layer 3: Additional encoded data
-define('BRANDING_HASH', 'cb435e03bf20f37fea4e48d26a2795ac03067a5e');
+//define('BRANDING_HASH', 'cb435e03bf20f37fea4e48d26a2795ac03067a5e');
 
 /**
  * XOR encryption/decryption function
@@ -82,7 +82,7 @@ function getValidatedModuleData($type = 'all') {
  */
 function getFallbackModuleData($type) {
     $fallback = [
-        'name' => 'AI Ticket Assistant',
+        'name' => 'AI Ticket Assistant (OpenRouter)',
         'url' => 'https://cyberin.in',
         'logo' => 'https://media.cyberin.in/file/cyberin/images/logo_big.png', // Keep Cyberin logo as fallback
         'author' => '<a href="https://cyberin.in" target="_blank"><img src="https://media.cyberin.in/file/cyberin/images/logo_big.png" style="max-width: 90px; height: auto;" alt="Cyberin Logo"></a>',
