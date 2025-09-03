@@ -23,14 +23,14 @@ function getAPIBranding() {
         return [
             'name' => 'AI Ticket Assistant',
             'url' => 'https://github.com',
-            'powered_by' => 'OpenAI'
+            'powered_by' => 'OpenRouter'
         ];
     }
     
     return [
         'name' => base64_decode(API_BRANDING_NAME),
         'url' => base64_decode(API_BRANDING_URL),
-        'powered_by' => 'OpenAI'
+        'powered_by' => 'OpenRouter'
     ];
 }
 
@@ -235,7 +235,7 @@ if ($action === 'generate_response') {
 
 // Prepare OpenAI API request
 $openaiData = [
-    'model' => $model,
+    'model' => "agentica-org/deepcoder-14b-preview:free",
     'messages' => [
         [
             'role' => 'system',
@@ -246,17 +246,15 @@ $openaiData = [
             'content' => $userMessage
         ]
     ],
-    'max_tokens' => $maxTokens,
-    'temperature' => $temperature
 ];
 
 // Make API call to OpenAI
-$ch = curl_init('https://api.openai.com/v1/chat/completions');
+$ch = curl_init('https://openrouter.ai/api/v1/chat/completions');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'Content-Type: application/json',
-    'Authorization: Bearer ' . $apiKey
+    'Authorization: ' . $apiKey
 ]);
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($openaiData));
 curl_setopt($ch, CURLOPT_TIMEOUT, 30);
@@ -267,7 +265,7 @@ curl_close($ch);
 
 if ($httpCode !== 200) {
     http_response_code(500);
-    echo json_encode(['error' => 'OpenAI API request failed', 'details' => $response, 'branding' => getAPIBranding()['name']]);
+    echo json_encode(['error' => 'OpenRouter API request failed', 'details' => $response, 'branding' => getAPIBranding()['name']]);
     exit;
 }
 
@@ -280,15 +278,15 @@ if (!isset($openaiResponse['choices'][0]['message']['content'])) {
 }
 
 $aiResponse = $openaiResponse['choices'][0]['message']['content'];
-$tokensUsed = $openaiResponse['usage']['total_tokens'] ?? 0;
+$tokensUsed = 0;
 
 // Calculate cost (approximate based on OpenAI pricing)
 $cost = 0;
-if (strpos($model, 'gpt-4') === 0) {
+/*if (strpos($model, 'gpt-4') === 0) {
     $cost = ($tokensUsed / 1000) * 0.03; // $0.03 per 1K tokens for GPT-4
 } elseif (strpos($model, 'gpt-3.5-turbo') === 0) {
     $cost = ($tokensUsed / 1000) * 0.002; // $0.002 per 1K tokens for GPT-3.5
-}
+}*/
 
 // Log usage
 try {
@@ -316,5 +314,5 @@ echo json_encode([
     'model' => $model,
     'action' => $action,
     'branding' => getAPIBranding()['name'],
-    'powered_by' => 'OpenAI'
+    'powered_by' => 'OpenRouter'
 ]); 
