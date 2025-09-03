@@ -30,31 +30,31 @@ function openai_ticket_assistant_config() {
         'author' => $moduleData['author'],
         'fields' => [
             'openai_api_key' => [
-                'FriendlyName' => 'OpenAI API Key',
+                'FriendlyName' => 'OpenRouter API Key',
                 'Type' => 'text',
                 'Size' => '100',
                 'Description' => 'Enter your OpenAI API key (starts with sk-)',
                 'Default' => '',
             ],
             'openai_model' => [
-                'FriendlyName' => 'OpenAI Model',
+                'FriendlyName' => 'OpenRouter Model',
                 'Type' => 'dropdown',
                 'Options' => 'agentica-org/deepcoder-14b-preview:free',
-                'Description' => 'Select the OpenAI model to use for generating responses',
+                'Description' => 'Select the OpenRouter model to use for generating responses',
                 'Default' => 'agentica-org/deepcoder-14b-preview:free',
             ],
             'max_tokens' => [
                 'FriendlyName' => 'Max Tokens',
                 'Type' => 'text',
                 'Size' => '10',
-                'Description' => 'Maximum number of tokens for AI response (default: 1000)',
+                'Description' => 'Unused',
                 'Default' => '1000',
             ],
             'temperature' => [
                 'FriendlyName' => 'Temperature',
                 'Type' => 'text',
                 'Size' => '10',
-                'Description' => 'AI response creativity (0.0 = focused, 1.0 = creative, default: 0.7)',
+                'Description' => 'Unused',
                 'Default' => '0.7',
             ],
             'system_prompt' => [
@@ -303,17 +303,17 @@ function openai_ticket_assistant_output($vars) {
                         <h3 class="panel-title"><strong><i class="fas fa-cogs"></i> Configuration Settings</strong></h3>
                     </div>
                     <div class="panel-body">
-                        <p>Configure your OpenAI API settings for AI-powered ticket responses. Version: {$version}</p>
+                        <p>Configure your OpenRouter API settings for AI-powered ticket responses. Version: {$version}</p>
                         <hr>
                         <form method="post" action="{$modulelink}">
                             <div class="form-group">
-                                <label for="openai_api_key">OpenAI API Key</label>
+                                <label for="openai_api_key">OpenRouter API Key</label>
                                 <input type="password" name="openai_api_key" id="openai_api_key" class="form-control" value="{$apiKey}" placeholder="sk-...">
                                 <small class="form-text text-muted">Your OpenAI API key (starts with sk-). The key is saved but not displayed for security.</small>
                             </div>
 
                             <div class="form-group">
-                                <label for="openai_model">OpenAI Model</label>
+                                <label for="openai_model">OpenRouter Model</label>
                                 <select name="openai_model" id="openai_model" class="form-control">
                                     {$modelOptions}
                                 </select>
@@ -325,14 +325,14 @@ function openai_ticket_assistant_output($vars) {
                                     <div class="form-group">
                                         <label for="max_tokens">Max Tokens</label>
                                         <input type="number" name="max_tokens" id="max_tokens" class="form-control" value="{$maxTokens}" min="100" max="8000">
-                                        <small class="form-text text-muted">Max tokens for AI response.</small>
+                                        <small class="form-text text-muted">Unused</small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="temperature">Temperature</label>
                                         <input type="number" name="temperature" id="temperature" class="form-control" value="{$temperature}" min="0" max="2" step="0.1">
-                                        <small class="form-text text-muted">AI response creativity.</small>
+                                        <small class="form-text text-muted">Unused</small>
                                     </div>
                                 </div>
                             </div>
