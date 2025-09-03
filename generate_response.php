@@ -254,7 +254,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'Content-Type: application/json',
-    'Authorization: ' . $apiKey
+    'Authorization: Bearer ' . $apiKey
 ]);
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($openaiData));
 curl_setopt($ch, CURLOPT_TIMEOUT, 30);
