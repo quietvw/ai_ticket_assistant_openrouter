@@ -112,7 +112,7 @@ function generateValidatedHTML($type = 'header') {
         return '<div class="' . $cssClass . '" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; text-align: center;">
                     <img src="' . $logoUrl . '" alt="' . $moduleData['name'] . '" class="' . $logoClass . '" style="max-width: 200px; height: auto; margin-bottom: 15px;">
                     <h2 style="margin: 0; color: white;">' . $moduleData['name'] . '</h2>
-                    <p style="margin: 10px 0 0 0; opacity: 0.9;">Powered by OpenAI • Developed by <a href="' . $moduleData['url'] . '" target="_blank" style="color: white; text-decoration: underline;">Cyberin</a></p>
+                    <p style="margin: 10px 0 0 0; opacity: 0.9;">Powered by OpenRouter • Developed by <a href="' . $moduleData['url'] . '" target="_blank" style="color: white; text-decoration: underline;">Cyberin</a></p>
                 </div>';
     }
     
