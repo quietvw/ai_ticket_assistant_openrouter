@@ -25,7 +25,7 @@ function openai_ticket_assistant_config() {
     
     return [
         'name' => 'AI Ticket Assistant',
-        'description' => 'AI-powered ticket reply assistant using OpenAI to help admin staff respond to customer tickets more effectively. Developed by ' . $moduleData['name'] . '.',
+        'description' => 'AI-powered ticket reply assistant using OpenRouter to help admin staff respond to customer tickets more effectively. Developed by ' . $moduleData['name'] . '.',
         'version' => $moduleData['version'],
         'author' => $moduleData['author'],
         'fields' => [
@@ -33,7 +33,7 @@ function openai_ticket_assistant_config() {
                 'FriendlyName' => 'OpenRouter API Key',
                 'Type' => 'text',
                 'Size' => '100',
-                'Description' => 'Enter your OpenAI API key (starts with sk-)',
+                'Description' => 'Enter your OpenRouter API key (starts with sk-)',
                 'Default' => '',
             ],
             'openai_model' => [
