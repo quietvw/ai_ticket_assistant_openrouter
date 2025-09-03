@@ -254,7 +254,7 @@ function openai_ticket_assistant_output($vars) {
     $formattedTotalCost = '$' . number_format($usageStats['total_cost'] ?? 0, 4);
 
     // Generate validated module HTML
-    $validatedHeader = function_exists('generateValidatedHTML') ? generateValidatedHTML('header') : '<div style="text-align: center; padding: 20px; background: #f8f9fa; border-radius: 8px; margin-bottom: 20px;"><h3>AI Ticket Assistant</h3><p>Powered by OpenAI</p></div>';
+    $validatedHeader = function_exists('generateValidatedHTML') ? generateValidatedHTML('header') : '<div style="text-align: center; padding: 20px; background: #f8f9fa; border-radius: 8px; margin-bottom: 20px;"><h3>AI Ticket Assistant</h3><p>Powered by OpenRouter</p></div>';
     $validatedFooter = function_exists('generateValidatedHTML') ? generateValidatedHTML('footer') : '<div style="background-color: #f8f9fa; border-top: 1px solid #dee2e6; padding: 15px; margin-top: 30px; text-align: center; font-size: 12px; color: #6c757d;"><p><strong>AI Ticket Assistant</strong> v' . $version . ' | Open Source</p></div>';
 
     // Main Output
