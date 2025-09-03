@@ -99,7 +99,7 @@ try {
 }
 
 $apiKey = $settings['openai_api_key'] ?? '';
-$model = $settings['openai_model'] ?? 'gpt-4';
+$model = $settings['openai_model'] ?? 'agentica-org/deepcoder-14b-preview:free';
 $maxTokens = (int)($settings['max_tokens'] ?? 1000);
 $temperature = (float)($settings['temperature'] ?? 0.7);
 $systemPrompt = $settings['system_prompt'] ?? 'You are a helpful customer support assistant for a web hosting company. Provide clear, professional, and helpful responses to customer inquiries. Be concise but thorough.';
